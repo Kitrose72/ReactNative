@@ -167,9 +167,14 @@ export const postComment = (campsiteId, rating, author, text) => dispatch => {
     setTimeout(() => {
         dispatch(addComment(newComment));
     }, 2000);
-  };
+};
 
 export const addComment = newComment => ({
   type: ActionTypes.ADD_COMMENT,
   payload: newComment
+});
+
+export const deleteFavorite = campsiteId => ({
+    type: ActionTypes.DELETE_FAVORITE,
+    payload: campsiteId
 });
